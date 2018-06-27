@@ -35,9 +35,10 @@ namespace 爬取.Abstracts
         /// <summary>
         /// 根据Url以远程内容更新自身的内容。返回自身内容是否产生了修改。
         /// </summary>
+        /// /// <param name="url">访问的Url</param>
         /// <returns>若自身内容发生了更改，返回true；否则返回false</returns>
         /// <exception cref="CannotAccessRemoteContentException">对应的Url无法访问时抛出</exception>
-        bool UpdateFromUrl();
+        bool UpdateFromRemote(string url);
     }
 
     /// <summary>
