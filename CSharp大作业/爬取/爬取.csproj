@@ -49,7 +49,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>爬取.Concretes.XmlWebpage</StartupObject>
+    <StartupObject>爬取.Concretes.JluNewsCrawledContent</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -70,7 +70,7 @@
     <Compile Include="Concretes\JluNewsCrawledContent.cs" />
     <Compile Include="Concretes\JluNewsCrawler.cs" />
     <Compile Include="Concretes\JluNewsForwarder.cs" />
-    <Compile Include="Concretes\XmlWebpage.cs" />
+    <Compile Include="Concretes\HtmlWebpage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

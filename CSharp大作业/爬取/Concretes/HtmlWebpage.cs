@@ -10,7 +10,7 @@ namespace 爬取.Concretes
     /// <summary>
     /// Xml格式的远程页面，例如html等
     /// </summary>
-    public class XmlWebpage : IWebpage
+    public class HtmlWebpage : IWebpage
     {
         /// <summary>
         /// 内容信息的文件名，包含扩展名
@@ -49,7 +49,7 @@ namespace 爬取.Concretes
         /// <summary>
         /// 初始化
         /// </summary>
-        public XmlWebpage()
+        public HtmlWebpage()
         {
             this.Url = "";
             this.RemoteLastWriteTime = DateTime.MinValue;
@@ -95,10 +95,10 @@ namespace 爬取.Concretes
             }
         }
 
-        public static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("[XmlWebpage.cs测试：]");
-            XmlWebpage page = new XmlWebpage();
+            HtmlWebpage page = new HtmlWebpage();
             page.UpdateFromRemote("https://www.baidu.com/index.html");
             Console.WriteLine($"ContentFileFullName:{page.ContentFileFullName}");
             Console.Write($"RawContent:{Encoding.UTF8.GetString(page.RawContent)}");

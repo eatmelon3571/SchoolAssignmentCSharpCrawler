@@ -7,7 +7,7 @@ namespace 爬取.Concretes
     /// <summary>
     /// 爬虫主类，控制子线程之间的协作
     /// </summary>
-    public class JluNewsCrawler : ICrawler<XmlWebpage, JluNewsForwarder>
+    public class JluNewsCrawler : ICrawler<HtmlWebpage, JluNewsForwarder>
     {
         /// <summary>
         /// 消息记录的写出目的地

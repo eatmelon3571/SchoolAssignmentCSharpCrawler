@@ -25,11 +25,6 @@ namespace 爬取.Abstracts
         string LocalFileName { get; }
 
         /// <summary>
-        /// 资源在远程端的创建时间
-        /// </summary>
-        DateTime RemoteCreatedTime { get; }
-
-        /// <summary>
         /// 资源在远程端的最近修改时间
         /// </summary>
         DateTime RemoteLastWriteTime { get; }
@@ -40,9 +35,11 @@ namespace 爬取.Abstracts
         byte[] Content { get; }
 
         /// <summary>
-        /// 从IWebContent设置自身的内容
+        /// 从IWebContent设置自身的内容，返回是否进行了更新
         /// </summary>
-        void SetFrom(IWebContent content);
+        /// <exception cref="FormatException">当WebContent内容的格式不符合对应具体类的格式</exception>
+        /// <returns>是否更新</returns>
+        bool SetFrom(IWebContent content);
 
         /// <summary>
         /// 按照LocalFileName从本地对应路径的文件中读取信息，设置自身的内容
